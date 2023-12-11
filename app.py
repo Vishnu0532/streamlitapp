@@ -1,17 +1,17 @@
 import streamlit as st
 
-st.title('Paradise to get largest of 3 numbers')
+st.title('Find the Largest Numbers')
 
-st.header('Enter your inputs here: ')
+st.header('Enter numbers : ')
 
-num1 = st.number_input('input 1st number')
-num2 = st.number_input('input 2nd number')
-num3 = st.number_input('input 3rd number')
+num1 = st.number_input('Input first number')
+num2 = st.number_input('Input second number')
+num3 = st.number_input('Input third number')
 
-def maximum():
-    lis = [num1 , num2 , num3]
-    a = max(lis)
-    st.success(f"Maximum = {a}")
+def maximum(num1,num2,num3):
+    return max(num1, num2, num3)
+    
 
-if st.button("Calculate result"):
-    maximum()
+if st.button("Find Largest"):
+    largest=maximum(num1,num2,num3)
+    st.success(f'The largest number is :{largest}')
